@@ -55,10 +55,10 @@ class UserForm extends Component {
     try {
       if (this.props.userId) {
         await updateUser(this.props.userId, user);
-        alert("User updated successfully!");
+        alert("User updated successfully!");  // Simulate updating user
       } else {
         await addUser(user);
-        alert("User added successfully!");
+        alert("User added successfully!");  // Simulate adding user
       }
       window.location.href = "/";
     } catch (err) {

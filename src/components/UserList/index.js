@@ -3,13 +3,11 @@ import { getUsers, deleteUser } from "../api";
 import "./index.css";
 
 class UserList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+   state = {
       users: [],
       error: null,
     };
-  }
+  
 
   componentDidMount() {
     this.fetchUsers();
@@ -17,9 +15,9 @@ class UserList extends Component {
 
   fetchUsers = async () => {
     try {
-      const response = await getUsers(); // Axios returns the data directly in response.data
+      const response = await getUsers(); // Fetch users from the API
       this.setState({ users: response.data });
-      console.log(response.data); // To verify the data
+      console.log(response.data); 
     } catch (err) {
       this.setState({ error: "Failed to fetch users. Please try again later." });
     }

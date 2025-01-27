@@ -66,4 +66,3 @@ user-management/
 
 ## Deployment 
    This project is deployed using Netlify directly from the GitHub repository.
-
